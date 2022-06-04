@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/noarfarber/FT-tech-test#readme",
   "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1"
   },
   "devDependencies": {
