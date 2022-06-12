@@ -1,6 +1,5 @@
-function searchKeyword(input, headlines) {
-
-	return headlines.filter(headline => headline[0].includes(input) || headline[2].includes(input));
+function filterByKeyword(keyword, headlines) {
+	return headlines.filter(headline => headline[0].includes(keyword) || headline[2].includes(keyword));
 }
 
-module.exports = searchKeyword;
+module.exports = filterByKeyword;

@@ -1,4 +1,4 @@
-const searchKeyword = require('./filterByKeyword')
+const filterByKeyword = require('./filterByKeyword')
 
 const fakeData = [
 	[
@@ -13,13 +13,13 @@ const fakeData = [
   ]
 ]
 test('should return one article given the input keyword inflation', () => {
-	expect(searchKeyword('inflation', fakeData).length).toBe(1)
+	expect(filterByKeyword('inflation', fakeData).length).toBe(1)
 });
 
 test('should return an article given the input keyword', () => {
-	expect(searchKeyword('Wednesday', fakeData)[0][1]).toBe("https://www.ft.com/content/fa54afe5-5959-4b57-a40d-bd2102a8c106")
+	expect(filterByKeyword('Wednesday', fakeData)[0][1]).toBe("https://www.ft.com/content/fa54afe5-5959-4b57-a40d-bd2102a8c106")
 });
 
 test('should return an article given the input keyword', () => {
-	expect(searchKeyword('inflation', fakeData)[0][0]).toBe("Has US inflation peaked?")
+	expect(filterByKeyword('inflation', fakeData)[0][0]).toBe("Has US inflation peaked?")
 });
