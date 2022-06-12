@@ -18,9 +18,9 @@ const getData = axios.post(url,
 	},
 	).then((response) => {
 		const headlines = (response.data.results[0].results.map(obj => obj));		
-		const allheadlines = headlines.map(headline => [headline.title.title, headline.location.uri, headline.summary.excerpt]
+		const allHeadlines = headlines.map(headline => [headline.title.title, headline.location.uri, headline.summary.excerpt]
 	);
-		return allheadlines;
+		return allHeadlines;
 	})
 	.catch((error) => console.log(error));
 
