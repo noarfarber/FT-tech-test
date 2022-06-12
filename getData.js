@@ -17,9 +17,10 @@ const getData = axios.post(url,
 		'Content-Type': 'application/json'
 	},
 	).then((response) => {
-		const headlines = (response.data.results[0].results.map(obj => obj.title.title));
-		console.log(headlines)
-		return headlines;
+		const headlines = (response.data.results[0].results.map(obj => obj));		
+		const allheadlines = headlines.map(headline => [headline.title.title, headline.location.uri, headline.summary.excerpt]
+	);
+		return allheadlines;
 	})
 	.catch((error) => console.log(error));
 
