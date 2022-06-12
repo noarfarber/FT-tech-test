@@ -3,8 +3,12 @@ html
 	head 
 		title FT Headlines
 		link(rel='stylesheet' type="text/css" href='/style.css')
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+		link(href='https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Charis+SIL&display=swap' rel='stylesheet')
+		script(src="https://kit.fontawesome.com/e87c96e8b2.js" crossorigin="anonymous")
 	body 
-		div
+		div(id='search-box')
 			input(
 				type='text'
 				id='user-input'
@@ -14,6 +18,7 @@ html
 			button(
 				type='submit'
 				id='search-button'
+				i class='fa-solid fa-magnifying-glass'
 			)
 		h1 #{title}
 		ul
