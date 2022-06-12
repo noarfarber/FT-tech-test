@@ -2,8 +2,35 @@ doctype html
 html 
 	head 
 		title FT Headlines
+		link(rel='stylesheet' type="text/css" href='/style.css')
 	body 
+		div
+			input(
+				type='text'
+				id='user-input'
+				placeholder='Search the FT'
+				value=''
+			)
+			button(
+				type='submit'
+				id='search-button'
+			)
 		h1 #{title}
 		ul
 			each article in articles 
-				li= article
+				section
+					li= article[0]
+						p= article[2]		
+		script. 
+			const searchButton = document.querySelector('#search-button');
+			searchButton.addEventListener('click', () => {
+				let userKeyword = document.querySelector('#user-input').value;
+				let url = `http://localhost:3000/search/${userKeyword}`
+				let baseUrl = 'http://localhost:3000'
+				if (userKeyword === "") {
+					window.open(baseUrl, "_self")
+				} else {
+					window.open(url, "_self")
+				}
+			})
+			
