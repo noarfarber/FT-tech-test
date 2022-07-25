@@ -1,12 +1,3 @@
-## Some Notes
-
-Thank you for taking the time to review my task.
-I appreciate the opportunity and have enjoyed working on it.
-
-From the optional list, I chose to:
-* Create a project that is not reliant on client-side frameworks
-* Give it a similar look as ft.com
-
 ## The Task
 
 Build a server-rendered site that displays headlines from The Financial Times. 
